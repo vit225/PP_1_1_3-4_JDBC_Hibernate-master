@@ -6,7 +6,7 @@ import java.sql.SQLException;
 
 public class Util {
     // реализуйте настройку соеденения с БД
-    private static String url = "jdbc:mysql://localhost:3306/MySql";
+    private static String url = "jdbc:mysql://localhost:3306/MySql?useSSL=false&serverTimezone=UTC";
     private static String user = "root";
     private static String password = "KataJava1024";
 
@@ -16,6 +16,7 @@ public class Util {
         {
             try {
                 connection = DriverManager.getConnection(url, user, password);
+                connection.setAutoCommit(false);
             } catch (SQLException e) {
                 e.printStackTrace();
             }
