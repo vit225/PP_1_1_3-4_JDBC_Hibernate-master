@@ -6,7 +6,7 @@ import java.sql.SQLException;
 
 public class Util {
     // реализуйте настройку соеденения с БД
-    private static String url = "jdbc:mysql://localhost:3306/MySql?useSSL=false&serverTimezone=UTC";
+    private static String url = "jdbc:mysql://localhost:3306/mysql1?useSSL=false&serverTimezone=UTC";
     private static String user = "root";
     private static String password = "KataJava1024";
 
@@ -22,9 +22,5 @@ public class Util {
             }
         }
         return connection;
-    }
-
-    public void closeConnection () {
-
     }
 }
